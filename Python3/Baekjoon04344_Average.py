@@ -7,4 +7,4 @@ while(T<0):
     for x in scorelist:
         total+=x
     print('{}%'.format(round(total/subject,3)),end="\n")
-    t=-1
+    T=-1
