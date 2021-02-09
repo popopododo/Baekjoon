@@ -1,15 +1,9 @@
-T=int(input())
+for i in range(int(input())):
+    list_input = list(map(int, input().split(' ')))
+    ave = sum(list_input[1:]) / list_input[0]
+    count = 0
+    for j in list_input[1:]:
+        if j > ave:
+            count += 1
+    print(str('%.3f' % round(count / list_input[0] * 100, 3)) + '%')
 
-while(1):
-    scorelist=list(map(int,input().split()))
-    subject=scorelist.pop(0)
-    total=0
-    count=0
-    for x in scorelist:
-        total+=x
-    average=round(total/subject,3)
-    for x in scorelist:
-        if x>average:
-            count+=1
-    print('{}%'.format(round(count/subject*100,3)),end="\n")
-    T=-1
